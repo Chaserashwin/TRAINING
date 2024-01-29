@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="test">Name</label>
+    <input name="test" type="text" id="input" placeholder="Whats is ur name?" />
+
+    <button id="btn" class="">Add</button>
+
+    <script>
+      const input = document.getElementById("input");
+      const buttonclick = document.getElementById("btn");
+
+      input.addEventListener("click", function () {
+        console.log(input.value);
+      });
+
+      buttonclick.addEventListener("click", function () {
+        console.log(input.value);
+      });
+    </script>
+  </body>
+</html>

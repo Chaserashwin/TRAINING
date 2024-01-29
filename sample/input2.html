@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="test">Name</label>
+    <input name="test" type="text" id="input" placeholder="Whats is ur name?" />
+    <!-- <input type="number" name="" id="a" />
+    <input type="number" name="" id="b" /> -->
+    <button id="btn" class="">Add</button>
+    <div id="content"></div>
+    <script>
+      const input = document.getElementById("input");
+      const buttonclick = document.getElementById("btn");
+      const content = document.querySelector("#content");
+
+      buttonclick.addEventListener("click", function () {
+        content.innerHTML = input.value;
+      });
+
+      //   const a = document.getElementById("a");
+      //   const b = document.querySelector("#b");
+      //   console.log(b);
+
+      //   const buttonclick = document.getElementById("btn");
+      //   const content = document.querySelector("#content");
+
+      //   buttonclick.addEventListener("click", function () {
+      //     const sum = Number(a.value) + Number(b.value);
+      //     content.innerHTML = sum;
+      //   });
+    </script>
+  </body>
+</html>

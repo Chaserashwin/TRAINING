@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    label {
+      display: inline-block;
+      width: 54px;
+    }
+  </style>
+  <body>
+    <div>
+      <label for="name">Input1:</label>
+      <input type="number" name="" id="a" />
+    </div>
+
+    <div>
+      <label for="name">Input2:</label>
+      <input type="number" name="" id="b" />
+    </div>
+
+    <button id="btn1" class="">Add</button>
+    <button id="btn2" class="">Subtract</button>
+    <button id="btn3" class="">Multiplication</button>
+    <button id="btn4" class="">Division</button>
+    <div id="Add"></div>
+    <div id="Sub"></div>
+    <div id="Multi"></div>
+    <div id="Divi"></div>
+    <script>
+      const a = document.getElementById("a");
+      const b = document.querySelector("#b");
+
+      //   const content1 = document.querySelector("#Add");
+      //   const content2 = document.querySelector("#Sub");
+      //   const content3 = document.querySelector("#Multi");
+      //   const content4 = document.querySelector("#Divi");
+
+      const content = document.querySelector("#Add", "#Sub", "#Multi", "#Divi");
+
+      // for Addition
+      const buttonclick = document.getElementById("btn1");
+      buttonclick.addEventListener("click", function () {
+        const sum = Number(a.value) + Number(b.value);
+        content.innerHTML = sum;
+      });
+
+      // for subtraction
+      const buttonclick2 = document.getElementById("btn2");
+      buttonclick2.addEventListener("click", function () {
+        const diff = Number(a.value) - Number(b.value);
+        content.innerHTML = diff;
+      });
+
+      // for Multiplication
+      const buttonclick3 = document.getElementById("btn3");
+      buttonclick3.addEventListener("click", function () {
+        const multi = Number(a.value) * Number(b.value);
+        content.innerHTML = multi;
+      });
+
+      // for Division
+      const buttonclick4 = document.getElementById("btn4");
+      buttonclick4.addEventListener("click", function () {
+        const divi = Number(a.value) / Number(b.value);
+        content.innerHTML = divi;
+      });
+    </script>
+  </body>
+</html>
