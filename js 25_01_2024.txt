@@ -1,2 +1,0 @@
-DOM manupulation
-Methods - foreach, filter, map

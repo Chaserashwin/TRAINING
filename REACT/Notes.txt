@@ -22,8 +22,13 @@ react is a declarative programming as in this we just need to give the instructi
 
 
 homework:-
+25 jan
+DOM manupulation
+Methods - foreach, filter, map
+
+30 jan
 flex
 
-homework 31 jan:-
+31 jan
 state 
 box model
