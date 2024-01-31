@@ -8,3 +8,7 @@ align-items: center; //--> uper niche se space krne ke liye
 
 homework:-
 flex
+
+homework 31 jan:-
+state 
+box model
