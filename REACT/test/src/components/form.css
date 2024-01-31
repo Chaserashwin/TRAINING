@@ -1,0 +1,27 @@
+form {
+  background-color: rgb(56, 197, 197);
+  border: 1px solid rgb(3, 3, 3);
+  max-width: 300px;
+  padding: 15px 30px;
+  color: blue;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  padding-right: 10px;
+  min-width: 2vw;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  padding: 2px;
+}

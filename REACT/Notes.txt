@@ -1,0 +1,10 @@
+Commands for creating a project:-
+npm create vite@latest
+
+
+properties for header:-
+justify-content: space-around; //--> left right me space krne ke liye
+align-items: center; //--> uper niche se space krne ke liye
+
+homework:-
+flex
