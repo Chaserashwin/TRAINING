@@ -1,12 +1,12 @@
 body {
   display: block;
   margin: 0px;
-  background-color: antiquewhite;
+  background-color: rgb(209, 144, 23);
 }
 .header {
   display: flex;
   align-items: center;
-  background-color: #759f9f;
+  background-color: #dcec46;
   padding: 11px 10px 11px 10px;
   justify-content: space-around;
 }
