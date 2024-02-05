@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Bottom from "./Bottom";
-import "../../css/Maincss/Bottom.css";
+import "../../css/Maincss/Upper.css";
 
 export default function Upper() {
   const [inputvalue, setInputvalue] = useState();

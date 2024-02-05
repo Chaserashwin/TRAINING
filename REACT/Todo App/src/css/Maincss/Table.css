@@ -1,0 +1,19 @@
+table,
+th,
+td {
+  border-bottom: 1px solid #040404;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: coral;
+}
+
+th {
+  background-color: #57564b;
+  color: white;
+}
+
+table {
+  width: 100%;
+}

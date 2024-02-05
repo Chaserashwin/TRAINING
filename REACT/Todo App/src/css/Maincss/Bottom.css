@@ -2,17 +2,17 @@
   background-color: #6b951e;
   border: 2px solid black;
   box-sizing: border-box;
-  min-width: 300px;
-  min-height: 80px;
+  /* min-width: 200px; */
+  /* min-height: 80px; */
   margin: 4px;
 }
 .container {
   background-color: #e92020;
   color: rgb(169, 216, 27);
   border: 2px solid black;
-  margin: 23px 5px;
+  /* margin: 23px 5px; */
   padding-left: 0px;
   border-radius: 7px;
   text-align: left;
-  min-width: 250px;
+  /* min-width: 200px; */
 }

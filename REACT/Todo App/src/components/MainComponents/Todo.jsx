@@ -6,7 +6,9 @@ import "../../css/Maincss/Todo.css";
 export default function Todo() {
   return (
     <div className="header">
-      <h1>ToDoLists</h1>
+      <h1>
+        <u>ToDoLists</u>
+      </h1>
       <Upper />
       <Bottom />
     </div>
