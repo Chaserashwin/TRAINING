@@ -1,4 +1,4 @@
-import "./Adding.css";
+import "../css/Adding.css";
 import { useState } from "react";
 import Editing from "./Editing";
 
