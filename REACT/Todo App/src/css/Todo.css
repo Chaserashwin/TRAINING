@@ -1,0 +1,13 @@
+body {
+  background-color: antiquewhite;
+}
+.header {
+  background-color: #e19393;
+  border: 2px solid black;
+  box-sizing: border-box;
+  min-width: 400px;
+  min-height: 500px;
+  text-align: center;
+  /* padding: 0px 0 15px 0; */
+  /* border-radius: 7px; */
+}

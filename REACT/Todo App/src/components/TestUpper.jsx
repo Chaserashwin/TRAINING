@@ -5,12 +5,12 @@ import Bottom from "./Bottom";
 export default function Upper() {
   const [todolist, SetTodolist] = useState("");
 
-  const changehandler = (e) => {
-    console.log(e.target.value);
-    SetTodolist(e.target.value);
-  };
+  // const changehandler = (e) => {
+  //   console.log(e.target.value);
+  //   SetTodolist(e.target.value);
+  // };
 
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   //   const handleclick = (e) => {
   //     e.preventDefault();

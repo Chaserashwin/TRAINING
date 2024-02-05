@@ -1,14 +1,14 @@
 import React from "react";
 import Upper from "./Upper";
 import Bottom from "./Bottom";
+import "../css/Todo.css";
 
-function Todo() {
+export default function Todo() {
   return (
     <div className="header">
+      <h1>ToDoLists</h1>
       <Upper />
       <Bottom />
     </div>
   );
 }
-
-export default Todo;
