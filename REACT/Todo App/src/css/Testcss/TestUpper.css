@@ -1,24 +1,23 @@
 body {
   background-color: #fff;
 }
-.uppercontainer {
+.UpperContainer {
   background-color: #e19393;
   border: 2px solid black;
-  border-radius: 7px;
-  min-width: 200px;
-  min-height: 100px;
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 200px;
   text-align: center;
-  margin: 0 10px;
   /* padding: 0px 0 15px 0; */
-  /* box-sizing: border-box; */
+  border-radius: 7px;
 }
 
 input[type="text"] {
   padding: 4px 6px;
-  margin: 8px 2px;
-  /* box-sizing: border-box; */
+  margin: 0 2px;
+  box-sizing: border-box;
   border: 2px solid black;
-  min-width: 270px;
+  min-width: 300px;
   text-align: center;
   /* min-height: 200px; */
 }

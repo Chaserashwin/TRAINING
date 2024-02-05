@@ -1,0 +1,18 @@
+.lowerContainer {
+  background-color: #e69797;
+  border: 2px solid black;
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 80px;
+  margin: 4px;
+}
+.container {
+  background-color: #e92020;
+  color: rgb(169, 216, 27);
+  border: 2px solid black;
+  margin: 23px 5px;
+  padding-left: 0px;
+  border-radius: 7px;
+  text-align: left;
+  min-width: 250px;
+}

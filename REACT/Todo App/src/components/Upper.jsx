@@ -1,46 +1,29 @@
-import "../css/Upper.css";
 import { useState } from "react";
+import "../css/Upper.css";
 import Bottom from "./Bottom";
 
 export default function Upper() {
-  const [todolist, SetTodolist] = useState("");
-
-  const changehandler = (e) => {
-    console.log(e.target.value);
-    SetTodolist(e.target.value);
-  };
-
+  const [inputvalue, setInputvalue] = useState();
+  const [count, setCount] = useState(0);
   const [show, setShow] = useState(false);
 
-  //   const handleclick = (e) => {
-  //     e.preventDefault();
-  //     setShow(true);
-  //   };
+  const handleclick = () => {
+    setCount((count) => count + 1);
+    setShow(true);
+  };
 
   return (
     <>
-      <div className="UpperContainer">
+      <div className="uppercontainer">
         <input
           type="text"
           placeholder="What do You Want to Add?"
-          value={todolist}
-          onChange={changehandler}
-          onClick={() => {
-            setShow(false);
-          }}
-        />
-        {/* {todolist} */}
-        <br />
-        <input
-          type="button"
-          value="Add"
-          onClick={() => {
-            setShow(true);
-          }}
+          value={inputvalue}
         />
         <br />
-
-        {/* {show && <Bottom val={todolist} Check={show} />} */}
+        <button onClick={handleclick}>Add</button>
+        <br />
+        {show && <Bottom index={count} data={inputvalue} />}
       </div>
     </>
   );

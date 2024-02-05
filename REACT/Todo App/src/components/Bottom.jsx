@@ -1,27 +1,15 @@
 import React, { useState } from "react";
 import "../css/Bottom.css";
 
-export default function Bottom(props) {
-  // let Value = { val };
-  // const [Value, setvalue] = useState([]);
-
-  // const todoarr = Value.map((item, index) => {
-  //   return <li key={index}>{item}</li>;
-  // });
-
-  const valuehandler = (e) => {
-    console.log(e.target.value);
-    setvalue(e.target.value);
-  };
-
+export default function Bottom({ index, data }) {
   return (
-    <div className="lowerContainer">
-      <div className="container">
-        {/* <h5>{val}</h5> */}
-        <input type="checkbox" name="first" id="first" />
-        {/* {{ Check } && { todoarr }} */}
-        {val}
-      </div>
+    <div className="lowercontainer">
+      <ul>
+        <li>
+          {index}
+          {data}
+        </li>
+      </ul>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 body {
-  background-color: antiquewhite;
+  background-color: rgb(224, 151, 55);
 }
 .header {
-  background-color: #e19393;
+  background-color: #e1cd37;
   border: 2px solid black;
   box-sizing: border-box;
   min-width: 400px;
