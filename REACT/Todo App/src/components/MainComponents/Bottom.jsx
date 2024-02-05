@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Bottom.css";
+import "../../css/Maincss/Bottom.css";
 
 export default function Bottom({ index, data }) {
   return (
