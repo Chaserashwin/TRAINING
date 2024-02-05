@@ -1,7 +1,7 @@
 import React from "react";
 import Upper from "./Upper";
 import Bottom from "./Bottom";
-import ".../css/Maincss/Todo.css";
+// import ".../css/Bottom.css";
 
 export default function Todo() {
   return (

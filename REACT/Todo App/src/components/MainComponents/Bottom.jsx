@@ -5,10 +5,10 @@ export default function Bottom({ index, data }) {
   return (
     <div className="lowercontainer">
       <ul>
-        <li>
+        {/* <li>
           {index}
           {data}
-        </li>
+        </li> */}
       </ul>
     </div>
   );
