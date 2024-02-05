@@ -6,36 +6,37 @@ export default function Sample() {
   const [showminus, setShowminus] = useState(true);
 
   const handleplus = () => {
-    setCount(count + 1);
+    if (count >= 20) {
+      setShowplus(false);
+    } else {
+      setCount((count) => count + 1);
+      setShowplus(true);
+    }
     console.log();
   };
 
   const handleminus = () => {
-    setCount(count - 1);
-
+    if (count <= 0) {
+      setShowminus(false);
+    } else {
+      setCount((count) => count - 1);
+      setShowminus(true);
+    }
     console.log();
   };
 
-  const handlecheck = () => {
-    count < 0 ? setShowminus(false) : setShowminus(true);
-    count > 20 ? setShowplus(false) : setShowplus(true);
-  };
+  // const handlecheck = () => {
+  //   console.log(showminus);
+
+  // };
 
   return (
     <>
       <div>sample</div>
-      {showminus && (
-        <button onClick={handleminus} onChange={handlecheck}>
-          -
-        </button>
-      )}
+      {showminus && <button onClick={handleminus}>-</button>}
 
       <button>{count}</button>
-      {showplus && (
-        <button onClick={handleplus} onChange={handlecheck}>
-          +
-        </button>
-      )}
+      {showplus && <button onClick={handleplus}>+</button>}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/Editing.css";
+import "../css/Bottom";
 
-function Editing({ val, Check }) {
+export default function Editing({ val, Check }) {
   // let Value = { val };
   // const [Value, setvalue] = useState([]);
 
@@ -25,5 +25,3 @@ function Editing({ val, Check }) {
     </div>
   );
 }
-
-export default Editing;

@@ -1,8 +1,8 @@
 import "../css/Adding.css";
 import { useState } from "react";
-import Editing from "./Editing";
+import Bottom from "./Bottom";
 
-function Adding() {
+export default function Adding() {
   const [todolist, SetTodolist] = useState("");
 
   const changehandler = (e) => {
@@ -41,10 +41,8 @@ function Adding() {
         />
         <br />
 
-        {show && <Editing val={todolist} Check={show} />}
+        {show && <Bottom val={todolist} Check={show} />}
       </div>
     </>
   );
 }
-
-export default Adding;
