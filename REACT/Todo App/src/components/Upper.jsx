@@ -1,4 +1,4 @@
-import "../css/Adding.css";
+import "../css/Upper.css";
 import { useState } from "react";
 import Bottom from "./Bottom";
 

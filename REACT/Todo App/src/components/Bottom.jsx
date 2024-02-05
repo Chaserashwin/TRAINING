@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Bottom";
+import "../css/Bottom.css";
 
 export default function Editing({ val, Check }) {
   // let Value = { val };
