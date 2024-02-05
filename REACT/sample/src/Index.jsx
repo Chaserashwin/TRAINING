@@ -3,19 +3,12 @@ import { useEffect, useState } from "react";
 
 import React from "react";
 
-function Index() {
+function Index(props) {
+  const [getvalue, setValue] = useState(10);
   const [getApi, setApi] = useState("");
-  const [count, setcount] = useState(0);
-  const [show, setshow] = useState(false);
 
-
-  const checkhandler = () => {
-    count % 10 == 0 setshow(true)
-  }
-
-  const changehandler = () => {
-    // console.log();
-    setcount((count) => count + 10);    
+  const handleClick = () => {
+    setValue(getvalue + 10);
   };
 
   const fetchData = async () => {
@@ -30,26 +23,30 @@ function Index() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [getvalue]);
 
   console.log(getApi);
 
   return (
-    <>
+    <div>
       {getApi &&
-        getApi.map((item, index) => (
+        getApi.slice(0, getvalue).map((item, index) => (
           <>
-            <div key={index} onChange={changehandler}>
-              <h4>Title {index}</h4>
+            <div key={index}>
+              <h4>Title & Body for:{index + 1}</h4>
               <div>{item.title}</div>
-              <h4>Body {index}</h4>
               <div>{item.body}</div>
             </div>
-            {(index + 1) % 10 && <button>Show More</button>}
+            <hr />
+            {/* {(index + 1) % 10 && <button>Show More</button>} */}
           </>
         ))}
-      );
-    </>
+      {getApi.length > getvalue ? (
+        <button onClick={handleClick}>Show More...</button>
+      ) : (
+        ""
+      )}
+    </div>
   );
 }
 
