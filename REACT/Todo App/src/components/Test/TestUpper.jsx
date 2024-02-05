@@ -1,6 +1,6 @@
 import "../css/Upper.css";
 import { useState } from "react";
-import Bottom from "./Bottom";
+import Bottom from "../Bottom";
 
 export default function Upper() {
   const [todolist, SetTodolist] = useState("");
