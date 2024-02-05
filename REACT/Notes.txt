@@ -1,6 +1,13 @@
 Commands for creating a project:-
 npm create vite@latest
 
+usefull snippets: 
+1-rfc
+import React from 'react'
+
+export default function $1() {
+  return <div>$0</div>
+}
 
 -> Properties for header:-
 justify-content: space-around; //--> left right me space krne ke liye
