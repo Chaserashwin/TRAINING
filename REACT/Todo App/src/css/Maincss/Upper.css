@@ -5,20 +5,23 @@ body {
   background-color: #e19393;
   border: 2px solid black;
   border-radius: 7px;
-  /* min-width: 200px; */
+  box-sizing: border-box;
   min-height: 100px;
   text-align: center;
-  margin: 0 10px;
+  margin: 2px 10px 2px 10px;
   /* padding: 0px 0 15px 0; */
-  box-sizing: border-box;
+  /* min-width: 200px; */
 }
 
 input[type="text"] {
+  box-sizing: border-box;
+  width: 300px;
+  border: 2px solid black;
+  text-align: center;
   padding: 4px 6px;
   margin: 8px 2px;
-  box-sizing: border-box;
-  border: 2px solid black;
+  /* min-width: 30vw;
+  max-width: 50vw; */
   /* min-width: 170px; */
-  text-align: center;
   /* min-height: 200px; */
 }

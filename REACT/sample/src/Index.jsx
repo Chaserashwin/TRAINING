@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import React from "react";
 
-function Index(props) {
+export default function Index(props) {
   const [getvalue, setValue] = useState(10);
   const [getApi, setApi] = useState("");
 
@@ -49,5 +49,3 @@ function Index(props) {
     </div>
   );
 }
-
-export default Index;

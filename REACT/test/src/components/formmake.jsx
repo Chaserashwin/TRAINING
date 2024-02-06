@@ -2,7 +2,7 @@ import "./form.css";
 import { useState } from "react";
 import Display from "./display";
 
-function formmake({ name, age, setTest }) {
+export default function Formmake({ name, age, setTest }) {
   const [inputname, setInputName] = useState("");
   const [inputnumber, setInputNumber] = useState("");
   const [inputemail, setInputEmail] = useState("");
@@ -155,5 +155,3 @@ function formmake({ name, age, setTest }) {
     </>
   );
 }
-
-export default formmake;

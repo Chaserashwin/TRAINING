@@ -1,4 +1,4 @@
-function Display({ valuename, valuenumber, valueemail }) {
+export default function Display({ valuename, valuenumber, valueemail }) {
   return (
     <>
       <div>
@@ -9,5 +9,3 @@ function Display({ valuename, valuenumber, valueemail }) {
     </>
   );
 }
-
-export default Display;

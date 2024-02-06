@@ -33,10 +33,11 @@ export default function Sample() {
   return (
     <>
       <div>sample</div>
-      {showminus && <button onClick={handleminus}>-</button>}
-
+      {/* {showminus && <button onClick={handleminus}>-</button>} */}
+      <button onClick={handleminus}>-</button>
       <button>{count}</button>
-      {showplus && <button onClick={handleplus}>+</button>}
+      <button onClick={handleplus}>+</button>
+      {/* {showplus && <button onClick={handleplus}>+</button>} */}
     </>
   );
 }

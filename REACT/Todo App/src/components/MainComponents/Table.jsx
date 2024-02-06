@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/Maincss/Table.css";
 
-export default function Table(props) {
+export default function Table({ Data }) {
+  const [status, setStatus] = useState("completed");
+  const [check, setCheck] = useState(true);
+
+  const clickhandler = () => {
+    if (check) {
+      setStatus("pending");
+      setCheck(false);
+      return;
+    } else {
+      setStatus("completed");
+      setCheck(true);
+    }
+  };
+
   return (
     <>
       <table>
@@ -12,6 +26,17 @@ export default function Table(props) {
             <th>Close</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td>{Data}</td>
+            <td>
+              <button onClick={clickhandler}>{status}</button>
+            </td>
+            <td>
+              <button>🗑️</button>
+            </td>
+          </tr>
+        </tbody>
         {/* <tbody>
           arr.map((item,index) =>
           {

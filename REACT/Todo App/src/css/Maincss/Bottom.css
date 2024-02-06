@@ -1,18 +1,17 @@
-.lowerContainer {
+.lowercontainer {
   background-color: #6b951e;
   border: 2px solid black;
+  border-radius: 7px;
   box-sizing: border-box;
+  min-height: 300px;
+  margin: 2px 10px;
   /* min-width: 200px; */
   /* min-height: 80px; */
-  margin: 4px;
 }
-.container {
-  background-color: #e92020;
-  color: rgb(169, 216, 27);
-  border: 2px solid black;
-  /* margin: 23px 5px; */
-  padding-left: 0px;
-  border-radius: 7px;
+
+h4 {
   text-align: left;
-  /* min-width: 200px; */
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 0px;
 }

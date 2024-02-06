@@ -5,10 +5,8 @@ import Table from "./Table";
 export default function Bottom({ index, data }) {
   return (
     <div className="lowercontainer">
-      <h4>
-        <u>Todo List:</u>
-        <Table />
-      </h4>
+      <h4>Todo List:-</h4>
+      <Table data={data} />
     </div>
   );
 }
