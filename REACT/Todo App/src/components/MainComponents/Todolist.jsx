@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/Maincss/Bottom.css";
+import "../../css/Maincss/Todolist.css";
 import Table from "./Table";
 
 export default function Bottom({ listitems, deleteTodo, statusChange }) {

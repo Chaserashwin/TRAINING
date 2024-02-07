@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Upper from "./Upper";
-import Bottom from "./Bottom";
+import Todoform from "./Todoform";
+import Todolist from "./Todolist";
 // import Table from "./Table";
 import "../../css/Maincss/Todo.css";
 
@@ -31,12 +31,12 @@ export default function Todo() {
       <h1>
         <u>ToDoLists</u>
       </h1>
-      <Bottom
+      <Todolist
         listitems={data}
         deleteTodo={deleteTodo}
         statusChange={statusChange}
       />
-      <Upper setData={addTodos} />
+      <Todoform setData={addTodos} />
     </div>
   );
 }

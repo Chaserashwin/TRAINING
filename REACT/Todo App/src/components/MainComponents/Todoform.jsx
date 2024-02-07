@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Bottom from "./Bottom";
-import "../../css/Maincss/Upper.css";
+import Todolist from "./Todolist";
+import "../../css/Maincss/Todoform.css";
 
 export default function Upper({ setData }) {
   const [getText, setText] = useState("");
@@ -39,7 +39,7 @@ export default function Upper({ setData }) {
     }
     // setCount((count) => count + 1);
     // // setError(false);
-    // <Bottom index={count} data={getText} />;
+    // <Todolist index={count} data={getText} />;
     // // setError(true);
   };
 
@@ -59,7 +59,7 @@ export default function Upper({ setData }) {
         </form>
         {error && <div>Empty String is not accepted</div>}
       </div>
-      {/* {<Bottom index={count} data={inputvalue} />}asdajh */}
+      {/* {<Todolist index={count} data={inputvalue} />}asdajh */}
     </>
   );
 }
