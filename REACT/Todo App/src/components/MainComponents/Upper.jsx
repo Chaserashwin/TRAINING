@@ -2,36 +2,62 @@ import { useState } from "react";
 import Bottom from "./Bottom";
 import "../../css/Maincss/Upper.css";
 
-export default function Upper() {
-  const [inputvalue, setInputvalue] = useState("");
-  const [count, setCount] = useState(0);
-  // const [show, setShow] = useState(true);
+export default function Upper({ setData }) {
+  const [getText, setText] = useState("");
+  const [place, setPlace] = useState(" + Add a task");
+  const [error, setError] = useState(false);
+  // const [count, setCount] = useState(0);
+
+  const submitForm = (e) => {
+    if (getText !== "") {
+      e.preventDefault();
+      setData(getText);
+    }
+    setText("");
+    // setData({
+    //   id: Math.floor(Math.random() * 100) + Date.now(),
+    //   text: getText,
+    //   complete: false,
+    // });
+  };
 
   const changehandler = (e) => {
+    setText(e.target.value);
     console.log(e.target.value);
-    setInputvalue(e.target.value);
+  };
+
+  const handleplaceholder = () => {
+    setPlace("Try typing 'Pay utilities bill by Sunday 5pm'");
   };
 
   const handleclick = () => {
-    setCount((count) => count + 1);
-    // setShow(false);
-    <Bottom index={count} data={inputvalue} />;
-    // setShow(true);
+    if (getText == "") setError(true);
+    else {
+      setError(false);
+      // setText("");
+      // setPlace("Try typing 'Pay utilities bill by Sunday 5pm'");
+    }
+    // setCount((count) => count + 1);
+    // // setError(false);
+    // <Bottom index={count} data={getText} />;
+    // // setError(true);
   };
 
   return (
     <>
       <div className="uppercontainer">
-        <input
-          type="text"
-          placeholder="What do You Want to Add?"
-          value={inputvalue}
-          onChange={changehandler}
-        />
-        <br />
-        <button onClick={handleclick}>Add</button>
-        {/* <br /> */}
-        {/* {show && <Bottom index={count} data={inputvalue} />} */}
+        <form onSubmit={submitForm}>
+          <input
+            type="text"
+            placeholder={place}
+            value={getText}
+            onChange={changehandler}
+            onClick={handleplaceholder}
+          />
+          <br />
+          <button onClick={handleclick}>Add</button>
+        </form>
+        {error && <div>Empty String is not accepted</div>}
       </div>
       {/* {<Bottom index={count} data={inputvalue} />}asdajh */}
     </>

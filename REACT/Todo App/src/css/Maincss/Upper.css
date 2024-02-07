@@ -2,11 +2,11 @@ body {
   background-color: #fff;
 }
 .uppercontainer {
-  background-color: #e19393;
+  background-color: #ff000091;
   border: 2px solid black;
   border-radius: 7px;
   box-sizing: border-box;
-  min-height: 100px;
+  min-height: 108px;
   text-align: center;
   margin: 2px 10px 2px 10px;
   /* padding: 0px 0 15px 0; */
@@ -15,11 +15,13 @@ body {
 
 input[type="text"] {
   box-sizing: border-box;
-  width: 300px;
   border: 2px solid black;
-  text-align: center;
-  padding: 4px 6px;
-  margin: 8px 2px;
+  width: 420px;
+  height: 35px;
+  font-size: 14px;
+  text-align: left;
+  padding: 7px 10px;
+  margin: 8px 0;
   /* min-width: 30vw;
   max-width: 50vw; */
   /* min-width: 170px; */

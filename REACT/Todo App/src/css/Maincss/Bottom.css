@@ -1,5 +1,5 @@
 .lowercontainer {
-  background-color: #6b951e;
+  background-color: #cb8430;
   border: 2px solid black;
   border-radius: 7px;
   box-sizing: border-box;
@@ -9,9 +9,22 @@
   /* min-height: 80px; */
 }
 
-h4 {
+h3 {
   text-align: left;
   margin-top: 0px;
   margin-left: 15px;
   margin-bottom: 0px;
 }
+
+#first {
+  width: 60%;
+}
+#second {
+  width: 25%;
+}
+#third {
+  width: 15%;
+}
+
+/* #todo-list {
+}  */

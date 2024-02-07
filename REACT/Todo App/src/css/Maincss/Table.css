@@ -1,12 +1,13 @@
 table,
 th,
 td {
-  border-bottom: 1px solid #040404;
+  border: 1px solid #040404;
   text-align: center;
+  padding: 5px 0px;
 }
 
 tr:hover {
-  background-color: coral;
+  background-color: rgb(230, 214, 101);
 }
 
 th {
@@ -16,4 +17,15 @@ th {
 
 table {
   width: 100%;
+  border-collapse: collapse;
+}
+
+#first {
+  width: 60%;
+}
+#second {
+  width: 25%;
+}
+#third {
+  width: 15%;
 }

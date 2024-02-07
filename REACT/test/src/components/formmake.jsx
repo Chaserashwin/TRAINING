@@ -1,6 +1,6 @@
 import "./form.css";
 import { useState } from "react";
-import Display from "./display";
+import Display from "./Display";
 
 export default function Formmake({ name, age, setTest }) {
   const [inputname, setInputName] = useState("");
