@@ -25,38 +25,44 @@ export default function Table({ listitems, deleteTodo, statusChange }) {
             <th id="third">Close</th>
           </tr>
         </thead>
-        <tbody>
-          {info &&
-            info.map((item, index) => {
-              <tr key={index}>
-                <td>{item.text}</td>
-                <td>
-                  <button onClick={() => statusChange(item.id)}>
-                    {item.complete ? "Completed" : "Pending"}
-                  </button>
-                </td>
-                <td>
-                  <button onClick={() => deleteTodo(item.id)}>🗑️</button>
-                </td>
-              </tr>;
-            })}
-        </tbody>
+        {info.map((item) => {
+          return (
+            <>
+              <tbody>
+                <tr key={item.id}>
+                  {item.complete ? (
+                    <td className="marked">{item.text}</td>
+                  ) : (
+                    <td>{item.text}</td>
+                  )}
+                  <td>
+                    <button onClick={() => statusChange(item.id)}>
+                      {item.complete ? "Completed" : "Pending"}
+                    </button>
+                  </td>
+                  <td>
+                    <button onClick={() => deleteTodo(item.id)}>🗑️</button>
+                  </td>
+                </tr>
+              </tbody>
+            </>
+          );
+        })}
       </table>
     </>
   );
 }
 
-// <tbody>
-// <tr>
-//   <td>{data.text}</td>
-//   <td>{/* <button onClick={clickhandler}>{status}</button> */}</td>
-//   <td>
-//     <button>🗑️</button>
-//   </td>
-// </tr>
-// </tbody>
-{
-}
+// {/* // <tbody>
+// // <tr>
+// //   <td>{data.text}</td>
+// //   <td>{/* <button onClick={clickhandler}>{status}</button> */}</td>
+// //   <td>
+// //     <button>🗑️</button>
+// //   </td>
+// // </tr>
+// // </tbody> */}
+// {
 
 {
   /* // const [data, setData] = useState([]);

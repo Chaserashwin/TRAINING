@@ -29,3 +29,7 @@ table {
 #third {
   width: 15%;
 }
+
+.marked {
+  color: red;
+}

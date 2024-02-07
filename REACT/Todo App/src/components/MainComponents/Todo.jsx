@@ -18,7 +18,9 @@ export default function Todo() {
   const statusChange = (ids) => {
     setData(
       data.map((items) =>
-        items.id === ids ? { ...text, complete: complete } : items
+        items.id === ids
+          ? { ...items, complete: (items.complete = true) }
+          : items
       )
     );
   };
@@ -29,12 +31,12 @@ export default function Todo() {
       <h1>
         <u>ToDoLists</u>
       </h1>
-      <Upper setData={addTodos} />
       <Bottom
         listitems={data}
         deleteTodo={deleteTodo}
         statusChange={statusChange}
       />
+      <Upper setData={addTodos} />
     </div>
   );
 }
