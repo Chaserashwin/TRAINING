@@ -13,6 +13,7 @@ tr:hover {
 th {
   background-color: #57564b;
   color: white;
+  font-weight: 400;
 }
 
 table {
@@ -33,3 +34,12 @@ table {
 .marked {
   color: red;
 }
+
+/* td#statuschange {
+  padding: 0 0;
+  background: pink;
+}
+td#deletetodo {
+  padding: 0 0;
+  background: pink;
+} */

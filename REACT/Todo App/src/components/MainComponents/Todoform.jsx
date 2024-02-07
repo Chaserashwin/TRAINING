@@ -46,7 +46,7 @@ export default function Upper({ setData }) {
   return (
     <>
       <div className="uppercontainer">
-        <form onSubmit={submitForm}>
+        <form className="container" onSubmit={submitForm}>
           <input
             type="text"
             placeholder={place}
@@ -54,10 +54,12 @@ export default function Upper({ setData }) {
             onChange={changehandler}
             onClick={handleplaceholder}
           />
-          <br />
-          <button onClick={handleclick}>Add</button>
+          <button id="add" onClick={handleclick}>
+            Add
+          </button>
         </form>
         {error && <div>Empty String is not accepted</div>}
+        {/* {error && alert("Empty String is not accepted")} */}
       </div>
       {/* {<Todolist index={count} data={inputvalue} />}asdajh */}
     </>
