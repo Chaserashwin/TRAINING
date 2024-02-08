@@ -5,6 +5,7 @@ import Authenticate from "./Authenticate";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [check, setCheck] = useState(false);
 
   const USERNAME = import.meta.env.VITE_USERNAME;
   const PASSWORD = import.meta.env.VITE_PASSWORD;
@@ -23,10 +24,11 @@ export default function Login() {
   };
 
   const handleclick = () => {
-    <Authenticate username={username} password={password} />;
+    if (username === USERNAME && password === PASSWORD) setCheck(true);
+    // <Authenticate username={username} password={password} />;
   };
   return (
-    <div>
+    <div className="login">
       <h2>Login</h2>
       <form onSubmit={handleclick}>
         <label htmlFor="username">Username</label>
