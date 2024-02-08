@@ -1,7 +1,7 @@
-import "./../style.css";
+import "../css/Navbar.css";
 import { useContext } from "react";
-import ThemeContext from "../themecontext";
-export default function Header() {
+import ThemeContext from "../store/Themecontext";
+export default function Navbar() {
   const themectx = useContext(ThemeContext);
 
   return (
@@ -13,7 +13,9 @@ export default function Header() {
         <li>Portfolio</li>
         <li>Contact</li>
       </ul>
-      <button>Submit</button>
+      <button onClick={themectx.themeToggle} className="btn" href="#">
+        Dark Mode
+      </button>
     </div>
   );
 }

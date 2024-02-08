@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import Header from "./components/firstcomponent.jsx";
-import Form from "./components/formmake.jsx";
+
+import { ThemeContextProvider } from "./store/Themecontext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Header />
+    {/* <ThemeContextProvider>
+    </ThemeContextProvider> */}
     <App />
-    {/* <Form /> */}
-    {/* <footer /> */}
-    {/* <content /> */}
   </React.StrictMode>
 );
