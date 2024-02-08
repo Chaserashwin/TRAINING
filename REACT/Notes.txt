@@ -40,6 +40,9 @@ react is a declarative programming as in this we just need to give the instructi
  when we access any data from API it takes a lot of cpu usage to compute the data 
 to prevent it from increasing the load time of our website we use {useEffect} to particular fetch the data when we need it.
 
+->{useContext} :-
+  used to use a functionality which is common to all the component like theme in webpage, cart in shopping websites which is common to all the componenets and is required by all the components
+
 ->{useRef} :-
  it works on the actual DOM not the Virtual DOM 
 	eg.:- contact us form 
