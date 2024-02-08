@@ -1,8 +1,8 @@
-# React + Vite
+In this we created a Navbar component and a form component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+form component is used to input the details in the in form like name, email, etc
 
-Currently, two official plugins are available:
+here we also use a Navbar which will contain a button used for the functionality of {useContext} hook which is used to change the dark mode and light mode in the webpage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+->{useContext} :-
+used to use a functionality which is common to all the component like theme in webpage, cart in shopping websites which is common to all the componenets and is required by all the components
