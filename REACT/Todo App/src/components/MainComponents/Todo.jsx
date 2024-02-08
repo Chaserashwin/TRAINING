@@ -20,11 +20,11 @@ export default function Todo() {
 
   const statusChange = (ids) => {
     setData(
-      data.map((items) =>
-        items.id === ids
+      data.map((items) => {
+        return items.id === ids
           ? { ...items, complete: (items.complete = true) }
-          : items
-      )
+          : items;
+      })
     );
     // setData(
     //   data.map((items) => {
@@ -69,3 +69,12 @@ export default function Todo() {
   statusChange={statusChange}
 /> */
 }
+
+// getName = () => "Name"
+
+// () =>{
+//     logic or not logic
+//     return()
+// }
+
+// () => sdfsdfh

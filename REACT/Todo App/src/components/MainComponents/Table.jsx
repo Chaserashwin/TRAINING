@@ -28,25 +28,23 @@ export default function Table({ listitems, deleteTodo, statusChange }) {
         <tbody>
           {info.map((item) => {
             return (
-              <>
-                <tr key={item.id}>
-                  {item.complete ? (
-                    <td className="marked">{item.text}</td>
-                  ) : (
-                    <td>{item.text}</td>
-                  )}
-                  <td>
-                    <button id="a" onClick={() => statusChange(item.id)}>
-                      {item.complete ? "Completed" : "Pending"}
-                    </button>
-                  </td>
-                  <td>
-                    <button id="b" onClick={() => deleteTodo(item.id)}>
-                      🗑️
-                    </button>
-                  </td>
-                </tr>
-              </>
+              <tr key={item.id}>
+                {item.complete ? (
+                  <td className="marked">{item.text}</td>
+                ) : (
+                  <td>{item.text}</td>
+                )}
+                <td>
+                  <button id="a" onClick={() => statusChange(item.id)}>
+                    {item.complete ? "Completed" : "Pending"}
+                  </button>
+                </td>
+                <td>
+                  <button id="b" onClick={() => deleteTodo(item.id)}>
+                    🗑️
+                  </button>
+                </td>
+              </tr>
             );
           })}
         </tbody>
