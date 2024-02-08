@@ -1,6 +1,9 @@
 import "./../style.css";
-
+import { useContext } from "react";
+import ThemeContext from "../themecontext";
 export default function Header() {
+  const themectx = useContext(ThemeContext);
+
   return (
     <div className="header">
       <h1>Header</h1>

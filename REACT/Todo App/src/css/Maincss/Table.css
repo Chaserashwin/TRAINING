@@ -35,11 +35,17 @@ table {
   color: red;
 }
 
-/* td#statuschange {
+#a {
   padding: 0 0;
-  background: pink;
+  color: rgb(0, 0, 0);
 }
-td#deletetodo {
+#a:hover {
+  background-color: blue;
+}
+#b {
   padding: 0 0;
-  background: pink;
-} */
+  /* background: pink; */
+}
+#b:hover {
+  background-color: red;
+}

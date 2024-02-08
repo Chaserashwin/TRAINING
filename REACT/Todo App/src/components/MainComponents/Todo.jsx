@@ -8,7 +8,10 @@ export default function Todo() {
   const [data, setData] = useState([]);
 
   const addTodos = (text) => {
-    setData([...data, { id: data.length + 1, text, complete: false }]);
+    //to display values to the bottom
+    // setData([...data, { id: data.length + 1, text, complete: false }]);
+    //to display values to the top
+    setData([{ id: data.length + 1, text, complete: false }, ...data]);
   };
 
   const deleteTodo = (id) => {
@@ -23,6 +26,17 @@ export default function Todo() {
           : items
       )
     );
+    // setData(
+    //   data.map((items) => {
+    //     return (
+    //       <>
+    //         {items.id === ids
+    //           ? { ...items, complete: (items.complete = true) }
+    //           : items}
+    //       </>
+    //     );
+    //   })
+    // );
   };
 
   console.log(data);
