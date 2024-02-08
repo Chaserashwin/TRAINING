@@ -58,8 +58,8 @@ export default function Upper({ setData }) {
             Add
           </button>
         </form>
-        {/* {error && <div>Empty String is not accepted</div>} */}
-        {error && alert("Empty String is not accepted")}
+        {error && <div>Empty String is not accepted</div>}
+        {/* {error && alert("Empty String is not accepted")} */}
       </div>
       {/* {<Todolist index={count} data={inputvalue} />}asdajh */}
     </>
