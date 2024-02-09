@@ -5,14 +5,18 @@ import Table from "./Table";
 export default function Bottom({ listitems, deleteTodo, statusChange }) {
   console.log(listitems);
   return (
-    <div className="lowercontainer">
-      <h3>Todo List:-</h3>
-      <Table
-        listitems={listitems}
-        deleteTodo={deleteTodo}
-        statusChange={statusChange}
-      />
-    </div>
+    <>
+      <div className="lowercontainer">
+        <h3>Todo List:-</h3>
+        <div className="todolist">
+          <Table
+            listitems={listitems}
+            deleteTodo={deleteTodo}
+            statusChange={statusChange}
+          />
+        </div>
+      </div>
+    </>
   );
 }
 

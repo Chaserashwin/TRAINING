@@ -1,19 +1,43 @@
 .lowercontainer {
-  background-color: #cb8430;
+  background-color: #ff7f00;
   border: 2px solid black;
   border-radius: 7px;
   box-sizing: border-box;
-  height: 300px;
-  margin: 2px 22px;
+  height: 290px;
+  margin: 0 22px 15px 22px;
+  position: relative;
+
+  /* position: relative; */
   /* min-width: 200px; */
   /* min-height: 80px; */
 }
+
+.todolist {
+  background-color: #ff7f00;
+  /* border: 2px solid black; */
+  border-radius: 7px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  height: 250px;
+  margin: 37px 0 0 0;
+  overflow-y: auto;
+
+  /* top: 0; */
+}
+
+/* .todolist::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(220, 49, 49);
+  border-radius: 1px;
+  background: #c62e2e;
+} */
 
 h3 {
   text-align: left;
   margin-top: 0px;
   margin-left: 15px;
   margin-bottom: 0px;
+  position: fixed;
+  /* top: 20px; */
 }
 
 #first {

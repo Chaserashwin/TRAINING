@@ -37,6 +37,7 @@ export default function Upper({ setData }) {
       // setText("");
       // setPlace("Try typing 'Pay utilities bill by Sunday 5pm'");
     }
+    // e.preventDefault();
     // setCount((count) => count + 1);
     // // setError(false);
     // <Todolist index={count} data={getText} />;
@@ -58,7 +59,7 @@ export default function Upper({ setData }) {
             Add
           </button>
         </form>
-        {error && <div>Empty String is not accepted</div>}
+        {error && <div id="error">Empty String is not accepted</div>}
         {/* {error && alert("Empty String is not accepted")} */}
       </div>
       {/* {<Todolist index={count} data={inputvalue} />}asdajh */}

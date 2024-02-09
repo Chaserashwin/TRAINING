@@ -18,7 +18,7 @@ export default function Table({ listitems, deleteTodo, statusChange }) {
   return (
     <>
       <table>
-        <thead>
+        <thead className="head">
           <tr>
             <th id="first">List</th>
             <th id="second">Status</th>

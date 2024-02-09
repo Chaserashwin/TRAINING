@@ -6,19 +6,23 @@ td {
   padding: 5px 0px;
 }
 
-tr:hover {
-  background-color: rgb(230, 214, 101);
-}
-
 th {
   background-color: #57564b;
   color: white;
   font-weight: 400;
 }
 
+tr:hover {
+  background-color: rgb(230, 214, 101);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+}
+td {
+  background-color: #e1902f;
+  font-weight: 600;
 }
 
 #first {
@@ -41,6 +45,7 @@ table {
 }
 #a:hover {
   background-color: blue;
+  /* transform: scale(1.2); */
 }
 #b {
   padding: 0 0;
@@ -48,4 +53,5 @@ table {
 }
 #b:hover {
   background-color: red;
+  /* transform: scale(1.2); */
 }
