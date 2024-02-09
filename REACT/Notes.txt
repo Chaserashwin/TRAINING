@@ -83,3 +83,6 @@ box model
 
 01 feb
 event loop
+
+09 feb
+react and redux

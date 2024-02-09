@@ -7,10 +7,10 @@ import Display from "./components/Display";
 const App = () => {
   const themeCtx = useContext(ThemeContext);
 
-  const darkClass = themeCtx.isDark ? "dark" : "";
-
+  // const darkClass = themeCtx.isDark ? "dark" : "";
+  console.log(themeCtx);
   return (
-    <div className="{`app ${darkClass}`}">
+    <div>
       <Navbar />
       <Form />
       <Display />

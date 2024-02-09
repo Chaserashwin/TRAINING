@@ -1,5 +1,45 @@
 .login {
-  /* box-sizing: border-box; */
+  background-color: #f0b338;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background-color: #e2740e;
+  border: 2px solid black;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: end;
 }
+
+.form-group {
+  background-color: #24d659;
+  border: 2px solid black;
+  align-items: center;
+  margin: 2px 4px;
+}
+
+#btn {
+  padding: 0;
+}
+/* 
+form {
+  background-color: rgb(108, 70, 27);
+  border: 1px solid rgb(3, 3, 3);
+  max-width: 300px;
+  padding: 15px 30px;
+  color: rgb(216, 205, 46);
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .form-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+  align-items: center;
+} */
