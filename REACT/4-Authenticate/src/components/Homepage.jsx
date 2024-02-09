@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "./Header";
-import Form from "./Form";
+import Content from "./Content";
 import Footer from "./Footer";
+import "../css/homepage.css";
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="home">
       <Header />
-      <Form />
+      <Content />
       <Footer />
     </div>
   );

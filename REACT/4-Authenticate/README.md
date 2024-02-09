@@ -1,8 +1,9 @@
-# React + Vite
+In this project we learn:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+we first learn how to initalise .env file and how to access that into any of our component
 
-Currently, two official plugins are available:
+In .env file we declare two variables for username and password and our task is to match it with the entered variables in our login page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Then we will move to create a Signup page where we put some conditions to create the username and password like username cant be started with number or password cant be less that 8
+
+Then we will learn about react-router-dom which help in routing of the webpages with the help of {useNavigate}.

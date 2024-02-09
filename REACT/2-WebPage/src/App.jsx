@@ -10,7 +10,7 @@ const App = () => {
   // const darkClass = themeCtx.isDark ? "dark" : "";
   console.log(themeCtx);
   return (
-    <div>
+    <div className="{`app ${darkClass}`}">
       <Navbar />
       <Form />
       <Display />

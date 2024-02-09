@@ -1,0 +1,32 @@
+nav {
+  background-color: aquamarine;
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 30px 0;
+  /* padding-bottom: 30px; */
+  /* justify-content: space-around; */
+}
+
+.leftnav {
+  border: 2px solid black;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.rightnav {
+  border: 2px solid black;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  /* padding: 0 12px; */
+  /* margin: 0 20px; */
+}
+/* align-items: center; */
+
+/* height: 50px; */
