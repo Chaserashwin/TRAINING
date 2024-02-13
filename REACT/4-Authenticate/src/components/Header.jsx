@@ -3,10 +3,10 @@ import Navbar from "./Navbar";
 import "../css/header.css";
 
 export default function Header() {
-  const [click, setClick] = useState(false);
-  const clickhandler = () => {
-    setClick((click) => !click);
-  };
+  // const [click, setClick] = useState(false);
+  // const clickhandler = () => {
+  //   setClick((click) => !click);
+  // };
   return (
     <div>
       <header>

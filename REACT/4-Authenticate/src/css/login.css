@@ -8,12 +8,13 @@
 }
 
 .form-wrapper {
-  background-color: #e2740e;
+  background-color: #e2cd0e;
   border: 2px solid black;
   box-sizing: border-box;
+  width: 50%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 
 .form-group {

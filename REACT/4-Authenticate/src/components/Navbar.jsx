@@ -9,7 +9,6 @@ export default function Navbar() {
   };
   return (
     <div>
-      p
       <nav>
         <div className="leftnav">
           <button>logo</button>

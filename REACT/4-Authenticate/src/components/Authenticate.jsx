@@ -1,5 +1,7 @@
 import React from "react";
 
-export const Authenticate = () => {
+function Authenticate() {
   return <div>Authenticate</div>;
-};
+}
+
+export default Authenticate;
