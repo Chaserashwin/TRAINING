@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Authenticate from "./Authenticate";
+// import Authenticate from "./Authenticate";
 import "../css/login.css";
 
 export default function Login() {

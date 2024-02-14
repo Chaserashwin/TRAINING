@@ -6,17 +6,19 @@
 
 .navbar {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   background-color: #dcec46;
   padding: 11px 10px 11px 10px;
   justify-content: space-around;
 }
 
-ul {
-  display: flex;
+.navbar ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
-li {
-  padding: 10px;
+.navbar li {
+  /* padding: 10px; */
+  font-size: smaller;
 }

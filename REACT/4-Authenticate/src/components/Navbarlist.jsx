@@ -1,16 +1,32 @@
 import "../css/navbarlist.css";
 // import { useContext } from "react";
 // import ThemeContext from "../store/Themecontext";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   //   const themectx = useContext(ThemeContext);
 
   return (
     <div className="navbar">
       <ul>
-        <li>Home</li>
-        <li>Services</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li>
+          <Link to={"/homepage"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/homepage/services"}>Services</Link>
+        </li>
+        <li>
+          <Link to={"/homepage/portfolio"}>Portfolio</Link>
+        </li>
+        <li>
+          <Link to={"/homepage/contact"}>Contact</Link>
+        </li>
+        <li>
+          <Link to={"/homepage/login"}>Login</Link>
+        </li>
+        <li>
+          <Link to={"/homepage/Signup"}>SignUp</Link>
+        </li>
       </ul>
       {/* <button onClick={themectx.themeToggle} className="btn" href="#">
         Dark Mode
@@ -24,3 +40,9 @@ export default function Navbar() {
 // }
 
 // export { test };
+
+{
+  /* <li></li>
+  <li></li>
+  <li>Contact</li> */
+}
