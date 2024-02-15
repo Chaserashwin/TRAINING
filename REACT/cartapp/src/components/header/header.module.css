@@ -1,0 +1,12 @@
+header {
+  min-height: 48vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+  
+}
+
+header h3{
+  padding-right: 16em;
+}

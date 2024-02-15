@@ -1,0 +1,10 @@
+.navigation{
+  background-color: var(--clr-light-gray);
+  padding: 1em 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

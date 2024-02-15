@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sample() {
+export default function Login() {
   return (
     <div className="grid h-screen place-items-center">
       <div className="w-full max-w-xs ">
@@ -41,7 +41,7 @@ function Sample() {
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
             >
-              Sign In
+              Log In
             </button>
             <a
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
@@ -58,5 +58,3 @@ function Sample() {
     </div>
   );
 }
-
-export default Sample;

@@ -1,0 +1,48 @@
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1021;
+}
+
+.modal{
+ position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1022;
+}
+
+.modal-dialog{
+  background-color: var(--clr-white);
+  position: relative;
+  z-index: 1022;
+  border-radius: 0.4em;
+}
+
+.closeButton {
+  border-radius: 4rem;
+  padding: 0;
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 1.6em;
+  font-weight: 300;
+  line-height: 1;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.closeButton:hover{
+  opacity: 1;
+}
+
+.modal-content{
+  position: relative;
+}
+

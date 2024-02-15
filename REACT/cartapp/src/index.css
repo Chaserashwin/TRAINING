@@ -1,0 +1,50 @@
+:root{
+  --ff-primary: 'Josefin Sans', sans-serif;
+  --clr-accent : hsl(274.62deg 75.26% 34.59%);
+  --clr-accent-green: hsl(120, 98%, 18%);
+  --clr-white : hsl(0, 0%, 100%);
+  --clr-black : hsl(0, 0%, 0%);
+  --clr-gray : hsl(0, 0%, 87%);
+  --clr-light-gray: hsl(0, 0%, 81%);
+  --clr-dark : hsl(0, 0%, 9%);
+  --clr-text-gray: hsl(0, 0%, 37%);
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 0.3em;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+
+button {
+  border: none;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 0.2em;
+}
+
+img{
+  max-width: 100%;
+}
+
+.container{
+  width: min(68em, 95%);
+  margin-inline: auto;
+}

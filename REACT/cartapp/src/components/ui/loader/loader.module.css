@@ -1,0 +1,5 @@
+.loader{
+  padding: 2em 0;
+  display: grid;
+  place-items: center;
+}

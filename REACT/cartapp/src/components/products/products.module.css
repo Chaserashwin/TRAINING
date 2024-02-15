@@ -1,0 +1,19 @@
+.products{
+  padding-block: 2.5em;
+}
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2em 1em;
+}
+
+.loadmore{
+  text-align: center;
+  margin: 4em 0;
+}
+
+.loadmore button{
+  background-color: transparent;
+  color: var(--clr-accent);
+  border: 1px solid var(--clr-accent);
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import { collapse, dropdown, initTE } from "tw-elements-react";
+// import { collapse, dropdown, initTE } from "tw-elements-react";
 
-initTE({ collapse, dropdown });
+// initTE({ collapse, dropdown });
 
 export default function Navbar() {
   return (
