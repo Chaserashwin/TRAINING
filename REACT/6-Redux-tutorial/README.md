@@ -1,8 +1,16 @@
-# React + Vite
+Basics of Redux:-
+Three Main components of Redux are:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-> Store : It is like a State which tells that what is the main function of it...
+interface CounterState {
+value: number;
+}
+interface UserState {
+isSignedIn: boolean;
+}
 
-Currently, two official plugins are available:
+-> Actions : These are the features of these store which performs specific operation...
+const incrementByAmount = { type: "INCREMENT", payload: 10};
+const decrement = {type: "DECREMENT" };
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-> Reducers : These are used to create copy of store and modify that copy version without affecting the store
