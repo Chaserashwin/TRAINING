@@ -1,5 +1,5 @@
 Basics of Redux:-
-Three Main components of Redux are:
+Three Main Concepts of Redux are:
 
 -> Store : It is like a State which tells that what is the main function of it...
 interface CounterState {
@@ -14,3 +14,7 @@ const incrementByAmount = { type: "INCREMENT", payload: 10};
 const decrement = {type: "DECREMENT" };
 
 -> Reducers : These are used to create copy of store and modify that copy version without affecting the store
+
+Commands for installing react :-
+npm install @reduxjs/toolkit
+npm install react-redux
