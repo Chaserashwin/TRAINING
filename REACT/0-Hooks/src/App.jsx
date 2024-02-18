@@ -1,8 +1,8 @@
 import React from "react";
 // import "./App.css";
-// import Demo1 from "./hooks/1-useState";
-// import Demo2 from "./hooks/2-useEffect";
-// import Demo3 from "./hooks/3-useMemo";
+// import Demo1 from "./hooks/1-useState/1-useState";
+// import Demo2 from "./hooks/2-useEffect/2-useEffect";
+// import Demo3 from "./hooks/3-useMemo/3-useMemo";
 
 function App() {
   return (
