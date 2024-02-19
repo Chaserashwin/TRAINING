@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/HomePage.jsx";
+import Home from "./components/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/About.jsx";
 import User from "./components/User.jsx";

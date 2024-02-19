@@ -1,7 +1,8 @@
 import "../css/Navbar.css";
 import { useContext } from "react";
 import ThemeContext from "../store/Themecontext";
-export default function Navbar() {
+
+const Navbar = () => {
   const themectx = useContext(ThemeContext);
 
   return (
@@ -13,13 +14,14 @@ export default function Navbar() {
         <li>Portfolio</li>
         <li>Contact</li>
       </ul>
-      <button onClick={themectx.themeToggle} className="btn" href="#">
-        Dark Mode
-      </button>
+      {/* <button onClick={themectx.themeToggle} href=""> */}
+      {/* Dark Mode
+      </button> */}
     </div>
   );
-}
+};
 
+export default Navbar;
 // function test() {
 //   return <h3>Test</h3>;
 // }
