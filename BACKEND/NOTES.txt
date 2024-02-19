@@ -1,0 +1,13 @@
+* What is Node JS:-
+-> it is an open source, cross-platform, JS runtime environment
+-> it helps us build scalable web applications and is event-driven, non-blocking I/O model.
+-> it is not a programming language
+-> it is scalable (event-driven)
+-> Real time application:- building APIs, web application, Mobile Applications,
+
+* Frameworks associated with Node.js:-
+-> Express 
+-> Next.js
+-> Koa.js
+
+* Architecture of Node:-
