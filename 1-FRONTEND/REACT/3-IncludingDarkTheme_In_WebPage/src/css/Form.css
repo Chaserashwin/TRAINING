@@ -1,0 +1,47 @@
+form {
+  background-color: rgb(108, 70, 27);
+  border: 1px solid rgb(3, 3, 3);
+  max-width: 300px;
+  padding: 15px 30px;
+  color: rgb(216, 205, 46);
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  padding-right: 10px;
+  min-width: 2vw;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  padding: 2px;
+}
+
+.details {
+  background-color: rgb(211, 188, 161);
+  border: 1px solid rgb(7, 7, 7);
+  /* max-width: 300px; */
+  /* padding: 15px 30px; */
+  color: rgb(241, 240, 222);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* margin-left: 200px; */
+}
+
+.more {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  padding: 15px 30px;
+}

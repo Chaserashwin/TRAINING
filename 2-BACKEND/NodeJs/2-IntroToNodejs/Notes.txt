@@ -1,0 +1,11 @@
+-> How to Setup project for nodejs?
+   npm init --y
+
+->package.json:- info about dependency
+->package.lock.json:- complete dependency
+
+->Nodemon:-node project get automatically updated [npm i nodemon]
+
+-> dependency VS dev-dependency:
+=> dependency: dependency required in production
+=> dev-dependency: dependency required in development [npm i nodemon --save-dev]
