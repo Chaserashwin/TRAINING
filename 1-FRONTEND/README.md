@@ -11,3 +11,4 @@ Q:- Why are we using vite instead of directly using CRA(create react app) ?
 -> Declarative and Imperative programming:-
   react is a declarative programming as in this we just need to give the instruction fot the final result for the 
 
+[15 Jan to 15 Feb]
