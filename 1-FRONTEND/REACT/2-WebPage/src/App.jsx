@@ -6,10 +6,10 @@ import Content from "./components/Content";
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Content />
+      {/* <Navbar /> */}
+      {/* <Content /> */}
       <Form />
-      <Display />
+      {/* <Display /> */}
     </div>
   );
 };

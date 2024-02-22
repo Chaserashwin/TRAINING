@@ -1,9 +1,10 @@
 import "../css/Navbar.css";
 import { useContext } from "react";
-import ThemeContext from "../store/Themecontext";
+import { ThemeContext } from "../store/Theme";
 
 const Navbar = () => {
-  const themectx = useContext(ThemeContext);
+  // const themectx = useContext(ThemeContext);
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
 
   return (
     <div className="header">
@@ -14,9 +15,7 @@ const Navbar = () => {
         <li>Portfolio</li>
         <li>Contact</li>
       </ul>
-      <button onClick={themectx.themeToggle} href="#">
-        Dark Mode
-      </button>
+      <button onClick={toggleTheme}>Dark Mode</button>
     </div>
   );
 };
