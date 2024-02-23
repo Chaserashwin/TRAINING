@@ -4,7 +4,7 @@
 // };
 // module.exports = x;
 
-//Named export
+//*Named export
 module.exports.add = (a, b) => {
   return a + b;
 };
@@ -18,7 +18,7 @@ module.exports.divi = (a, b) => {
   return a / b;
 };
 
-//--> for finding the highest element in the array
+//*--> for finding the highest element in the array
 module.exports.highest = (arr) => {
   arr.sort();
   arr.reverse();
@@ -31,7 +31,7 @@ module.exports.highest = (arr) => {
   return;
 };
 
-//--> for inputting file
+//*--> for inputting file
 module.exports.fileRead = (filename) => {
   const fs = require("fs");
   fs.readFile(`./${filename}`, "utf-8", (err, data) => {
