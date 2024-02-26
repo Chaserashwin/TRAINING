@@ -1,0 +1,10 @@
+=>methods:
+1-GET: to retrieve data
+2-POST: to send data
+3-DELETE: to delete data
+4-PUT/PATCH: to update data
+
+=>:MVCs
+Modal
+Viewer
+Controller

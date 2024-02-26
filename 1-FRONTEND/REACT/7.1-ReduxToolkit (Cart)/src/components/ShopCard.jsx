@@ -12,7 +12,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import { increment } from "../redux/counter/counterSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 function ShopCard() {
+  const count = useSelector((state) => state.counter?.value);
+  console.log(count);
+  const dispatch = useDispatch();
   return (
     <div>
       <Card maxW="sm">
@@ -36,7 +42,11 @@ function ShopCard() {
             <Button variant="solid" colorScheme="blue">
               Buy now
             </Button>
-            <Button variant="ghost" colorScheme="blue">
+            <Button
+              onClick={() => dispatch(increment())}
+              variant="ghost"
+              colorScheme="blue"
+            >
               Add to cart
             </Button>
           </ButtonGroup>
