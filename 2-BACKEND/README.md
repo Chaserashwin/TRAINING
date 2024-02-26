@@ -18,16 +18,21 @@
 
 - how to start?
   commands:-
+  ```
   mkdir NodeJs
   cd NodeJs
   npm i cowsay -g // for installing a package globally
   npm list -g // for checking the installed packages
   npm uninstall cowsay -g // for uninstalling
+  ```
 
 -> npx :- (node package executer)
 it is used to install the package during running time and it automatically deletes the package when the working is done
 And in case of npm it install the full package in the system and it remains in the system until it is deleted/uninstall
+
+```
 npx i cowsay -g // for installing the package for temperary
+```
 
 -> REPL:-
 R-Read :
