@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectCount } from "../redux/counter/counterSlice";
+// import { selectCount } from "../redux/counter/counterSlice";
 
 function Navbar() {
   const count = useSelector((state) => {
@@ -78,7 +78,7 @@ function Navbar() {
           </ul>
         </div>
         <a className="navbar-brand" href="#">
-          Cart:{selectCount}
+          Cart:{count}
         </a>
       </div>
     </nav>

@@ -2,9 +2,9 @@ var express = require("express"); // importing express
 var path = require("path");
 var app = express(); // creating an object for express
 
-var bodyParser = require("body-parser");
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false })); //
+// var bodyParser = require("body-parser"); // depricated as already included in express
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // if true read array and if false read string
 
 //----------------------------------------------------------------------------------------------//
 
@@ -49,7 +49,7 @@ app.get("/form2", (req, res) => {
 app.post("/postdata", (req, res) => {
   console.log(req.body);
   res.send(
-    `Welcome ${req.body.username} and password is ${req.body.userpassword}`
+    `Welcome ${req.body.username} and password is ${req.body.userpassword} and ur hobbies are: ${req.body.userhobbies}`
   );
 });
 
