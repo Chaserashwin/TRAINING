@@ -18,12 +18,7 @@ app.use(
   })
 );
 
-app.users = [
-  {
-    username: "ashwin",
-    password: "12345",
-  },
-];
+app.users = [];
 
 app.get("/", (req, res) => {
   if (req.session.count) {
@@ -42,7 +37,7 @@ app.get("/signupform", (req, res) => {
   NEWPASS = req.body.newpass;
 });
 
-app.post("/loginform", (req, res) => {
+app.get("/loginform", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "loginform.html"));
 });
 
