@@ -18,7 +18,12 @@ app.use(
   })
 );
 
-app.users = [];
+let arr = [
+  {
+    username: "ashwin",
+    password: "12345",
+  },
+];
 
 app.get("/", (req, res) => {
   if (req.session.count) {
@@ -31,32 +36,38 @@ app.get("/", (req, res) => {
 });
 
 //-----------------------------------------------------------------------//
+//route to get to the signup form
 app.get("/signupform", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "signupform.html"));
-  NEWUSER = req.body.newname;
-  NEWPASS = req.body.newpass;
 });
 
+//route which stores the information entered in the signup form
+app.post("/storeinfo", (req, res) => {
+  NEWUSER = req.body.newname;
+  console.log(NEWUSER);
+  NEWPASS = req.body.newpass;
+  console.log(NEWPASS);
+  arr.push({ NEWUSER, NEWPASS });
+  res.redirect("/loginform");
+});
+
+// route which get to the login form
 app.get("/loginform", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "loginform.html"));
 });
 
+// route which is used to check the entered data with the already existing data
 app.post("/login", (req, res) => {
-  var uname = req.body.username; // username wala data udhaya gya hai
-  req.session.user = uname; // session variable user
-  var upass = req.body.userpass;
-  req.session.pass = upass;
-  console.log(req.session.user);
-  res.redirect("/check");
-});
-
-//! for authentication
-app.get("/check", (req, res) => {
-  if (req.session.user === NEWUSER && req.session.pass === NEWPASS) {
-    res.send("Successfull Entered");
+  let uname = req.body.username; // username wala data udhaya gya hai
+  console.log(uname);
+  let upass = req.body.userpass;
+  console.log(upass);
+  if (arr.find((ele) => ele.username === uname && ele.userpass === upass)) {
+    // req.session.user = uname; // session variable user
+    // req.session.pass = upass;
     res.redirect("/profile");
   } else {
-    res.send("Wrong Credentials!!");
+    res.send("Wrnong credentiaals");
   }
 });
 
@@ -77,3 +88,12 @@ app.listen(2000, (err) => {
   if (err) console.log(err);
   else console.log("server is running at localhost:2000");
 });
+//  for authentication
+// app.get("/check", (req, res) => {
+//   if (req.session.user === NEWUSER && req.session.pass === NEWPASS) {
+//     res.send("Successfull Entered");
+//     res.redirect("/profile");
+//   } else {
+//     res.send("Wrong Credentials!!");
+//   }
+// });
