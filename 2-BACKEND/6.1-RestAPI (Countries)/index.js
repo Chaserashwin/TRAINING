@@ -3,7 +3,7 @@ var axios = require("axios");
 
 var app = express();
 
-const apiURL = "https://restcountries.com/v3.1";
+const apiURL = "https://restcountries.com/v2";
 
 // 1st Route
 app.get("/getCountries", async (req, res) => {
@@ -22,13 +22,13 @@ app.get("/getCountries", async (req, res) => {
 });
 
 // 2nd Route
-app.get("/getCountries/name/:name", async (req, res) => {
+app.get("/getCountries/name/:Name", async (req, res) => {
   try {
-    const NAME = req.params.name;
-    let getData = await axios.get(`${apiURL}/name/:${NAME}`);
+    const NAME = req.params.Name;
+    let getData = await axios.get(`${apiURL}/name/${NAME}`);
     res.status(200).json({
       success: true,
-      posts: getData.data.filter((ele) => ele.name == NAME),
+      posts: getData.data.filter((ele) => ele.name === NAME),
     });
   } catch (error) {
     res.status(404).json({
