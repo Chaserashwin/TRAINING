@@ -43,11 +43,12 @@ app.get("/signupform", (req, res) => {
 
 //route which stores the information entered in the signup form
 app.post("/storeinfo", (req, res) => {
-  NEWUSER = req.body.newname;
+  username = req.body.newname;
   console.log(NEWUSER);
-  NEWPASS = req.body.newpass;
+  password = req.body.newpass;
   console.log(NEWPASS);
-  arr.push({ NEWUSER, NEWPASS });
+  arr.push({ username, password });
+  console.log(arr);
   res.redirect("/loginform");
 });
 
@@ -62,23 +63,28 @@ app.post("/login", (req, res) => {
   console.log(uname);
   let upass = req.body.userpass;
   console.log(upass);
-  if (arr.find((ele) => ele.username === uname && ele.userpass === upass)) {
-    // req.session.user = uname; // session variable user
-    // req.session.pass = upass;
+  if (arr.find((ele) => ele.username == uname && ele.password == upass)) {
+    req.session.user = uname; // session variable user
+    req.session.pass = upass;
     res.redirect("/profile");
   } else {
-    res.send("Wrnong credentiaals");
+    res.send(
+      `Wrong credentials <br> <a href="/Signup">Signup</a><br> <a href="/login">Login</a>`
+    );
   }
 });
 
+// route to open page if authenticate successfull and session is created
 app.get("/profile", (req, res) => {
   if (req.session.user) {
+    console.log(arr);
     res.send(`Welcome ${req.session.user} <br> <a href="/logout">Logout</a>`);
   } else {
     res.redirect("/loginform"); //!if the session is not currently active
   }
 });
 
+// when logout button is pressed the session is destroyed
 app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/loginform");
