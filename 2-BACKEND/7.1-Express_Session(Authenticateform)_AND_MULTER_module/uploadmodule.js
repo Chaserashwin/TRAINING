@@ -19,7 +19,7 @@ function fileFilter(req, file, cb) {
   }
 }
 
-const upload = multer({ dest: "uploads/" });
+// const upload = multer({ dest: "uploads/" });
 
 const upload = multer({ storage: storefile, fileFilter: fileFilter });
 
