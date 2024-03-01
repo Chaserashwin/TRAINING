@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h2>Login Page</h2>
+    <div class="bg-slate-400 border-black">
+      <form action="/getfiles" method="post" enctype="multipart/form-data">
+        <label>Select file:</label>
+        <input
+          type="file"
+          class="form-control"
+          name="imageupload"
+          multiple
+        /><br />
+        <button type="submit">Upload file</button>
+      </form>
+    </div>
+  </body>
+</html>
