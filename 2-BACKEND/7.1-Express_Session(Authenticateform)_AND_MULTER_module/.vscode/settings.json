@@ -9,5 +9,6 @@
     "udhaya",
     "userpass",
     "wala"
-  ]
+  ],
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }

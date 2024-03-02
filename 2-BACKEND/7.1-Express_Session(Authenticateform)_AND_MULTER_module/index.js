@@ -6,8 +6,6 @@ var multer = require("multer");
 // upload = multer('{ dest: 'uploads/' }')
 var app = express();
 
-var NEWUSER;
-var NEWPASS;
 app.use(express.urlencoded({ extended: true })); //for body parser
 
 //for middleware
