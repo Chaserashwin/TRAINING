@@ -1,4 +1,5 @@
-### template engines
+## Template engines:
 
-- ejs
-  [EJS](https://ejs.co/)
+### ejs
+
+https://github.com/mde/ejs/wiki/Using-EJS-with-Express
