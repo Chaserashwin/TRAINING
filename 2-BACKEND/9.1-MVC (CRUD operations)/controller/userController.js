@@ -3,8 +3,8 @@ var path = require("path");
 let arr = [
   {
     Name: "Ashwin",
-    Number: "100",
-    Address: "india",
+    RollNumber: "2002829",
+    Stream: "IT",
   },
 ];
 
@@ -14,17 +14,20 @@ module.exports.homepage = (req, res) => {
 
 module.exports.success = (req, res) => {
   var NAME = req.body.newname;
-  var NUMBER = req.body.newnumber;
-  var ADDRESS = req.body.newaddress;
+  var ROLLNUMBER = req.body.newrollnumber;
+  var STREAM = req.body.newstream;
+  arr.push({ NAME, ROLLNUMBER, STREAM });
+  console.log(arr);
+  res.redirect("/");
   //   res.sendFile(path.join(__dirname, "views", "form.html"));
 };
 
 module.exports.createinfo = (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "form.html"));
+  res.sendFile(path.join(__dirname, "views", "createform.html"));
 };
 
 module.exports.readinfo = (req, res) => {
-  res.send("hi");
+  res.send(arr);
 };
 
 module.exports.updateinfo = (req, res) => {
