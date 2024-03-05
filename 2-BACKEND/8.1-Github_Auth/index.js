@@ -33,11 +33,19 @@ app.get("/success", (req, res) => {
   res.render("profile", { name: userprofile.displayName });
 });
 
-app.get("/logout", (req, res) => {
-  console.log("I AM LOGOUT");
-  req.session.destroy();
-  res.redirect("/login");
+app.get("/logout", function (req, res, next) {
+  res.clearCookie("connect.sid");
+  req.logout(function (err) {
+    console.log(err);
+    req.session.destroy();
+    res.redirect("/");
+  });
 });
+//   (req, res) => {
+// console.log("I AM LOGOUT");
+// req.session.destroy();
+// res.redirect("/login");
+// );
 
 //error route
 app.get("/error", (req, res) => {
