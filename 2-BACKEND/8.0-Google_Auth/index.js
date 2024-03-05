@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require("express");
 var session = require("express-session");
 var passport = require("passport");
@@ -22,10 +23,9 @@ app.use(passport.session());
 // for using template engine
 app.set("view engine", "ejs");
 
-var GOOGLE_CLIENT_ID =
-  "1034992796985-9gnv937ljprdirb9es65rs733ua9u4o5.apps.googleusercontent.com";
-var GOOGLE_CLIENT_SECRET_KEY = "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";
-var REDIRECT_URI = "http://localhost:2000/google/callback";
+GOOGLE_CLIENT_ID = process.env.CLIENT_ID;
+const GOOGLE_CLIENT_SECRET_KEY = process.env.CLIENT_SECRET_KEY;
+const REDIRECT_URI = process.env.REDIRECT_URI;
 
 var userprofile; //for taking from profile that helps in displaying the profile after auth
 
@@ -81,7 +81,7 @@ passport.deserializeUser(function (user, cb) {
   cb(null, user);
 });
 
-app.listen(2000, (err) => {
+app.listen(process.env.PORT, (err) => {
   if (err) console.log(err);
-  else console.log("server is running at 2000");
+  else console.log(`server is running at ${process.env.PORT}`);
 });
