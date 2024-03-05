@@ -35,8 +35,8 @@ app.get("/form1", (req, res) => {
 });
 
 app.get("/getdata", (req, res) => {
-  var name = req.query.username;
-  var password = req.query.userpassword;
+  var name = req.body.username;
+  var password = req.body.userpassword;
   res.send(`Welcome ${name} and password is ${password}`);
 });
 
@@ -90,7 +90,10 @@ app.get("/studentdata", (req, res) => {
 //!---------------------------------------------------------------------------------------------//
 
 //^This is to initiate at which server port this must run
-app.listen(1000);
+app.listen(1000, (err) => {
+  if (err) console.log(err);
+  else console.log(`server is running at 1000`);
+});
 
 //-------------------------------------------------------------------------------------------//
 

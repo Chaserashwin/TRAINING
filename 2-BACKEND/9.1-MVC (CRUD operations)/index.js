@@ -10,4 +10,7 @@ app.use(express.urlencoded({ extended: true })); // if true read array and if fa
 
 app.use("/", routes);
 
-app.listen(2000);
+app.listen(2000, (err) => {
+  if (err) console.log(err);
+  else console.log(`server is running at 2000`);
+});

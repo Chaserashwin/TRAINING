@@ -22,3 +22,8 @@
 - Modal
 - Viewer
 - Controller
+
+### Other Info
+
+- req.query = get method
+- req.body = post method
