@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require("express");
 var session = require("express-session");
 var passport = require("passport");
@@ -19,10 +20,6 @@ app.use(passport.session());
 
 // for using template engine
 app.set("view engine", "ejs");
-
-var GITHUB_CLIENT_ID = "1ff20bfdc41f628f6e9c";
-var GITHUB_CLIENT_SECRET_KEY = "6723f1cc568b6092c747b4be04b00d115914652b";
-var REDIRECT_URI = "http://localhost:2000/github/callback";
 
 var userprofile; //for taking from profile that helps in displaying the profile after auth
 
@@ -51,9 +48,9 @@ app.get("/error", (req, res) => {
 passport.use(
   new GitHubStrategy(
     {
-      clientID: GITHUB_CLIENT_ID,
-      clientSecret: GITHUB_CLIENT_SECRET_KEY,
-      callbackURL: REDIRECT_URI,
+      clientID: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET_KEY,
+      callbackURL: process.env.REDIRECT_URI,
     },
     function (accessToken, refreshToken, profile, done) {
       userprofile = profile;
@@ -92,7 +89,7 @@ passport.deserializeUser(function (user, cb) {
   cb(null, user);
 });
 
-app.listen(2000, (err) => {
+app.listen(process.env.PORT, (err) => {
   if (err) console.log(err);
-  else console.log("server is running at 2000");
+  else console.log(`server is running at ${process.env.PORT}`);
 });
