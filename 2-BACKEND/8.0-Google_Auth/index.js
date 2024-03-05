@@ -23,9 +23,9 @@ app.use(passport.session());
 // for using template engine
 app.set("view engine", "ejs");
 
-GOOGLE_CLIENT_ID = process.env.CLIENT_ID;
-const GOOGLE_CLIENT_SECRET_KEY = process.env.CLIENT_SECRET_KEY;
-const REDIRECT_URI = process.env.REDIRECT_URI;
+// GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+// const GOOGLE_CLIENT_SECRET_KEY = process.env.GOOGLE_CLIENT_SECRET_KEY;
+// const REDIRECT_URI = process.env.REDIRECT_URI;
 
 var userprofile; //for taking from profile that helps in displaying the profile after auth
 
@@ -48,9 +48,9 @@ app.get("/error", (req, res) => {
 passport.use(
   new GoogleStrategy(
     {
-      clientID: GOOGLE_CLIENT_ID,
-      clientSecret: GOOGLE_CLIENT_SECRET_KEY,
-      callbackURL: REDIRECT_URI,
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET_KEY,
+      callbackURL: process.env.REDIRECT_URI,
     },
     function (accessToken, RefreshToken, profile, done) {
       userprofile = profile;
