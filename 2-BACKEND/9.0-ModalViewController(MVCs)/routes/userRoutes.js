@@ -8,4 +8,5 @@ userRoutes.get("/", userCtrl.homepage);
 // for login route
 userRoutes.get("/login", userCtrl.login);
 
+// for exporting the routes
 module.exports = userRoutes;

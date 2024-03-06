@@ -27,7 +27,7 @@ module.exports.createinfo = (req, res) => {
 };
 
 module.exports.readinfo = (req, res) => {
-  res.send(arr);
+  res.render("display", { data:arr });
 };
 
 module.exports.updateinfo = (req, res) => {
