@@ -2,9 +2,9 @@ var path = require("path");
 
 let arr = [
   {
-    Name: "Ashwin",
-    RollNumber: "2002829",
-    Stream: "IT",
+    Name: "",
+    RollNumber: "",
+    Stream: "",
   },
 ];
 
@@ -17,7 +17,6 @@ module.exports.createinfo = (req, res) => {
 };
 
 module.exports.success = (req, res) => {
-  alert("successfully created");
   // console.log(req);
   var NAME = req.body.newname;
   var ROLLNUMBER = req.body.newrollnumber;

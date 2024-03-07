@@ -12,3 +12,5 @@
   - we need to create a table first by anyname in our case **"user"**
 
 ### now we just need to create operation and call them inside index.js
+
+https://www.w3schools.com/nodejs/nodejs_mysql.asp
