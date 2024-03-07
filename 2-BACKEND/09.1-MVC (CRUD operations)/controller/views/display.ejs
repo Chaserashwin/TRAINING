@@ -6,15 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    { data.map((dat,index)=>(
+    <div key="{dat.id}">
       <ul>
-        <li>Name is: <%= data.NAME %></li>
-        <li>Rollnumber is: <%= data.ROLLNUMBER %></li>
-        <li>Stream is: <%= data.STREAM %></li>
+        <li>Name is: <%= dat.NAME %></li>
+        <li>Rollnumber is: <%= dat.ROLLNUMBER %></li>
+        <li>Stream is: <%= dat.STREAM %></li>
       </ul>
-      <button type="button" class="btn btn-warning">
-        <a href="/">HomePage</a>
-      </button>
     </div>
+    )) }
+    <button type="button" class="btn btn-warning">
+      <a href="/">HomePage</a>
+    </button>
   </body>
 </html>

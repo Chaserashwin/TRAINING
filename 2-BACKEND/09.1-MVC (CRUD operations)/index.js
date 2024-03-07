@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: true })); // if true read array and if fa
 
 app.use("/", routes); //to call all routes
 
-app.listen(2000, (err) => {
+const PORT = 3000;
+
+app.listen(PORT, (err) => {
   if (err) console.log(err);
-  else console.log(`server is running at 2000`);
+  else console.log(`server is running at http://localhost:${PORT}`);
 });

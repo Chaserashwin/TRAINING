@@ -2,9 +2,10 @@ var path = require("path");
 
 let arr = [
   {
-    Name: "",
-    RollNumber: "",
-    Stream: "",
+    id: "",
+    name: "",
+    rnumber: "",
+    stream: "",
   },
 ];
 
@@ -17,14 +18,13 @@ module.exports.createinfo = (req, res) => {
 };
 
 module.exports.success = (req, res) => {
-  // console.log(req);
   var NAME = req.body.newname;
   var ROLLNUMBER = req.body.newrollnumber;
   var STREAM = req.body.newstream;
   console.log(NAME, ROLLNUMBER, STREAM);
   arr.push({ Name: NAME, RollNumber: ROLLNUMBER, Stream: STREAM });
   console.log(arr);
-  res.send("Successfully Added");
+  res.send(`Successfully Added <button><a href="/">HomePage</a></button>`);
   // res.redirect("/");
   //   res.sendFile(path.join(__dirname, "views", "form.html"));
 };
