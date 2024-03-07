@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // if true read array and if false read string
 
-app.use("/", routes);
+app.use("/", routes); //to call all routes
 
 app.listen(2000, (err) => {
   if (err) console.log(err);
