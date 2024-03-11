@@ -6,7 +6,7 @@
     <title>searchPost</title>
   </head>
   <body>
-    <div>This is search Post</div>
+    <h2>This is search Post</h2>
     <form action="/successsearchPost" method="get">
       <label>Enter Title You want to search:</label>
       <input type="search" name="searchtitle" />
@@ -15,6 +15,7 @@
     </form>
     <div>
       <%result.map((item)=>{%>
+      <li>Id- <%=item.id%></li>
       <li>Title- <%=item.title%></li>
       <li>Content- <%=item.content%></li>
       <br />

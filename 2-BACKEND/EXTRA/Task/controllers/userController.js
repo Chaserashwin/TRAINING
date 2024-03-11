@@ -25,6 +25,6 @@ module.exports.searchPost = (req, res) => {
 
 module.exports.successsearchPost = (req, res) => {
   result = arr.filter((ele) => ele.title == req.query.searchtitle);
-  // console.log(result);
+  console.log(result);
   res.render("searchPost", { result: result });
 };
