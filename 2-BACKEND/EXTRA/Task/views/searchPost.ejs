@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>searchPost</title>
+  </head>
+  <body>
+    <div>This is search Post</div>
+    <form action="/successsearchPost" method="get">
+      <label>Enter Title You want to search:</label>
+      <input type="search" name="searchtitle" />
+      <button type="submit">Search</button>
+      <%# varsearch = data.filter((ele) => searchtitle == ele.title) %>
+    </form>
+    <!-- <div>
+      <ul>
+        <li>Title- <%#= result.title %></li>
+        <li>Content- <%#= result.content %></li>
+      </ul>
+    </div> -->
+  </body>
+</html>

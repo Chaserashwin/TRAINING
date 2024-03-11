@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="alert alert-primary text-center">
+      <h2>Displayed Form</h2>
+      <button type="button">
+        <a href="/addPost">Add Post</a>
+      </button>
+      <button type="button">
+        <a href="/searchPost">Search Post</a>
+      </button>
+    </div>
+    <div>
+      <%data.map((item,id)=>{%>
+      <ul>
+        [<%= item.id %>]
+        <li>Title- <%=item.title%></li>
+        <li>Content- <%=item.content%></li>
+        <br />
+      </ul>
+
+      <%}) %>
+    </div>
+  </body>
+</html>
