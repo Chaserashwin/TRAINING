@@ -1,6 +1,6 @@
 var id = 0;
 var arr = [];
-
+var result = [];
 module.exports.homepage = (req, res) => {
   res.render("homepage", { data: arr });
 };
@@ -20,14 +20,11 @@ module.exports.successaddPost = (req, res) => {
 };
 
 module.exports.searchPost = (req, res) => {
-  res.render("searchPost");
+  res.render("searchPost", { result: result });
 };
 
 module.exports.successsearchPost = (req, res) => {
-  // console.log(req.query.searchtitle);
   result = arr.filter((ele) => ele.title == req.query.searchtitle);
-  console.log(result);
-  // res = JSON.stringify(result);
-  // console.log(res.content);
+  // console.log(result);
   res.render("searchPost", { result: result });
 };

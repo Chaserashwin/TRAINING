@@ -13,11 +13,12 @@
       <button type="submit">Search</button>
       <%# varsearch = data.filter((ele) => searchtitle == ele.title) %>
     </form>
-    <!-- <div>
-      <ul>
-        <li>Title- <%#= result.title %></li>
-        <li>Content- <%#= result.content %></li>
-      </ul>
-    </div> -->
+    <div>
+      <%result.map((item)=>{%>
+      <li>Title- <%=item.title%></li>
+      <li>Content- <%=item.content%></li>
+      <br />
+      <%}) %>
+    </div>
   </body>
 </html>
