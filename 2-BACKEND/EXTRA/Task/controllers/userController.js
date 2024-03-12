@@ -1,3 +1,5 @@
+var upload = require("../uploadmodule");
+
 var id = 0;
 var arr = [];
 var result = [];
@@ -9,11 +11,20 @@ module.exports.addPost = (req, res) => {
   res.render("addPost");
 };
 
+// module.exports.successimageupload = upload.single("imageupload");
+
 module.exports.successaddPost = (req, res) => {
+  console.log(req);
   id++;
   var title = req.body.title;
   var content = req.body.content;
-  var post = { id: id, title: title, content: content };
+  // var image = req.file.path;
+  var post = {
+    id: id,
+    title: title,
+    content: content,
+    // image: image,
+  };
   arr.push(post);
   console.log(arr);
   res.render("homepage", { data: arr });

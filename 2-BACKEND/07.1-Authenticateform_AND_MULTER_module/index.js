@@ -2,8 +2,8 @@ var express = require("express");
 var session = require("express-session");
 var upload = require("./uploadmodule");
 var path = require("path");
-var multer = require("multer");
-// upload = multer('{ dest: 'uploads/' }')
+
+var upload = require("./uploadmodule");
 var app = express();
 
 var NEWUSER;
