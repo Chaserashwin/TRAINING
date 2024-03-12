@@ -1,0 +1,164 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/): mongodb://localhost:27017
+mongodb://localhost:27017
+Current Mongosh Log ID: 65f042102274817e782873c9
+Connecting to:          mongodb://localhost:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
+Using MongoDB:          7.0.6
+Using Mongosh:          2.1.5
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2024-03-12T17:19:29.325+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs
+admin     40.00 KiB
+config   108.00 KiB
+local     72.00 KiB
+teacher   40.00 KiB
+test> use teacher
+switched to db teacher
+teacher> db.student.find()
+[
+  {
+    _id: ObjectId('65f04506e4b369061eb09c26'),
+    name: 'ashwin',
+    age: 22,
+    identity: { hasAadhar: true, hasPan: true }
+  }
+]
+teacher> db.student.insert({name:"shubham",age:22})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('65f045a92274817e782873ca') }
+}
+teacher> db.student.find()
+[
+  {
+    _id: ObjectId('65f04506e4b369061eb09c26'),
+    name: 'ashwin',
+    age: 22,
+    identity: { hasAadhar: true, hasPan: true }
+  },
+  {
+    _id: ObjectId('65f045a92274817e782873ca'),
+    name: 'shubham',
+    age: 22
+  }
+]
+teacher>
+
+teacher> db.student.insertone({_id:1,name:"nikhil",age:22})
+TypeError: db.student.insertone is not a function
+teacher> db.student.insertOne({_id:1,name:"nikhil",age:22})
+{ acknowledged: true, insertedId: 1 }
+teacher> db.student.findOne()
+{
+  _id: ObjectId('65f04506e4b369061eb09c26'),
+  name: 'ashwin',
+  age: 22,
+  identity: { hasAadhar: true, hasPan: true }
+}
+teacher> db.student.find()
+[
+  {
+    _id: ObjectId('65f04506e4b369061eb09c26'),
+    name: 'ashwin',
+    age: 22,
+    identity: { hasAadhar: true, hasPan: true }
+  },
+  {
+    _id: ObjectId('65f045a92274817e782873ca'),
+    name: 'shubham',
+    age: 22
+  },
+  { _id: 1, name: 'nikhil', age: 22 }
+]
+teacher> use db
+switched to db db
+db> use Company
+switched to db Company
+Company> db.Employee.insertOne(name:"ashwin",Gender:"male",skill_proficient:["c","c++","java"]
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:26)
+
+> 1 | db.Employee.insertOne(name:"ashwin",Gender:"male",skill_proficient:["c","c++","java"]
+    |                           ^
+  2 |
+
+Company> db.Employee.insertOne({name:"ashwin",Gender:"male",skill_proficient:["c","c++","java"]})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65f04ae62274817e782873cb')
+}
+Company> db.Employee.find()
+[
+  {
+    _id: ObjectId('65f04ae62274817e782873cb'),
+    name: 'ashwin',
+    Gender: 'male',
+    skill_proficient: [ 'c', 'c++', 'java' ]
+  }
+]
+Company> db.Employee.insertMany([{_id:1,name:"nikhil",Gender:"male",skill_proficient:["c++","java"]},{_id:2,name:"raju",Gender:"male",skill_proficient:["c","java"]},{_id:3,name:"akash",Gender:"male",skill_proficient:["c++","java"]},{_id:4,name:"rastogi",Gender:"male",skill_proficient:["react"]},{_id:5,name:"ladki",Gender:"female",skill_proficient:["c","c++","java","react"]})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:367)
+
+> 1 | db.Employee.insertMany([{_id:1,name:"nikhil",Gender:"male",skill_proficient:["c++","java"]},{_id:2,name:"raju",Gender:"male",skill_proficient:["c","java"]},{_id:3,name:"akash",Gender:"male",skill_proficient:["c++","java"]},{_id:4,name:"rastogi",Gender:"male",skill_proficient:["react"]},{_id:5,name:"ladki",Gender:"female",skill_proficient:["c","c++","java","react"]})
+    |
+
+
+          ^
+  2 |
+
+Company> db.Employee.insertMany([{_id:1,name:"nikhil",Gender:"male",skill_proficient:["c++","java"]},{_id:2,name:"raju",Gender:"male",skill_proficient:["c","java"]},{_id:3,name:"akash",Gender:"male",skill_proficient:["c++","java"]},{_id:4,name:"rastogi",Gender:"male",skill_proficient:["react"]},{_id:5,name:"ladki",Gender:"female",skill_proficient:["c","c++","java","react"]}])
+{
+  acknowledged: true,
+  insertedIds: { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
+}
+Company> db.Employee.find()
+[
+  {
+    _id: ObjectId('65f04ae62274817e782873cb'),
+    name: 'ashwin',
+    Gender: 'male',
+    skill_proficient: [ 'c', 'c++', 'java' ]
+  },
+  {
+    _id: 1,
+    name: 'nikhil',
+    Gender: 'male',
+    skill_proficient: [ 'c++', 'java' ]
+  },
+  {
+    _id: 2,
+    name: 'raju',
+    Gender: 'male',
+    skill_proficient: [ 'c', 'java' ]
+  },
+  {
+    _id: 3,
+    name: 'akash',
+    Gender: 'male',
+    skill_proficient: [ 'c++', 'java' ]
+  },
+  {
+    _id: 4,
+    name: 'rastogi',
+    Gender: 'male',
+    skill_proficient: [ 'react' ]
+  },
+  {
+    _id: 5,
+    name: 'ladki',
+    Gender: 'female',
+    skill_proficient: [ 'c', 'c++', 'java', 'react' ]
+  }
+]
+Company>
