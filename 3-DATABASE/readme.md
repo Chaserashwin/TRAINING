@@ -4,7 +4,7 @@
 
 binary for B and javascript for J
 
-### RDBMS vs MONGODB
+### RDBMS vs MONGODB:-
 
 ### How to setup mongodb?
 
@@ -51,8 +51,4 @@ Q:- Establish a new db name "Company" follow by operation of collection name
 Name, Gender, skill_proficient
 and add the fields into it
 
-> ![](5.png)
-> ![](6.png)
-> ![](7.png)
-> ![](8.png)
-> ![](9.png)
+> ![](5.png) > ![](6.png) > ![](7.png) > ![](8.png) > ![](9.png)
