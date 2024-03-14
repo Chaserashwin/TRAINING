@@ -37,3 +37,4 @@ use("teacher");
 
 //* for 3rd query
 db.products.createIndex({ name: "text" });
+db.products.find({ $text: { $search: "" } });
