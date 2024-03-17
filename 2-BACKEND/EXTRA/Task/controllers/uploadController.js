@@ -1,3 +1,3 @@
 var upload = require("../uploadmodule");
 
-module.exports.successimageupload = upload.single("imageupload");
+module.exports.successimageupload = upload;

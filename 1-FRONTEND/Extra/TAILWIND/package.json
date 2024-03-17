@@ -1,0 +1,13 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "(https://youtu.be/_9mTJ84uL1Q?si=Dw-PhydnxqdViEv3)",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

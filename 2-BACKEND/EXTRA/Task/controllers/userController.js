@@ -11,13 +11,21 @@ module.exports.addPost = (req, res) => {
   res.render("addPost");
 };
 
-// module.exports.successimageupload = upload.single("imageupload");
+// module.exports.successimageupload = (req, res) => {
+//   return rupload.single("imageupload");
+//   next();
+// };
 
-module.exports.successaddPost = (req, res) => {
+module.exports.successaddPost = (req, res, next) => {
+  // upload.single("imageUpload").then((data)=>{
+
+  // }
+
   console.log(req);
   id++;
   var title = req.body.title;
   var content = req.body.content;
+
   // var image = req.file.path;
   var post = {
     id: id,
