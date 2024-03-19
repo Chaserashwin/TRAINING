@@ -16,3 +16,14 @@
 5. call in the index.js
 
 - we use save() which will work instead of insertOne()/ insertMany()
+
+## Note:-
+
+findOne-
+FindbyId- for searching by an Id
+
+## Link for CRUD:
+
+(https://www.geeksforgeeks.org/node-js-crud-operations-using-mongoose-and-mongodb-atlas/)
+
+(https://medium.com/@skhans/how-to-build-a-basic-node-js-crud-app-with-mongoose-and-mongodb-3e958a36001d)

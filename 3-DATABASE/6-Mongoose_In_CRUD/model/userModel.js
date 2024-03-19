@@ -17,3 +17,6 @@ var userSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model("user", userSchema);
+
+//* using the third parameter we can add a new collection in the database "Register"
+// module.exports = mongoose.model("user", userSchema, "Register");
